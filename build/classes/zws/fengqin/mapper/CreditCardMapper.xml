@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zws.fengqin.mapper.CreditCardMapper">
+	<select id="queryAll" resultType="zws.fengqin.model.CreditCard">
+		select * from creditcard
+	</select>
+	
+	<update id="update" >
+		update creditcard set kazhu=#{kazhu},fakahang=#{fakahang},kawei=#{kawei},
+		zhangdan=#{zhangdan},huankuan =#{huankuan},shengyu=#{shengyu},
+		time=now(),money=#{money},yihuan=#{yihuan},weihuan	=#{weihuan},
+		hezhang=#{hezhang} where id=#{id}
+	</update>
+	<insert id="add">
+		insert into creditcard values(?,?,?,?,?,?,?,?,?,?,?);
+	</insert>
+	
+	<delete id="del">
+		delete from creditcard where id =#{id} 
+	</delete>
+</mapper>
