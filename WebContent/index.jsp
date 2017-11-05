@@ -177,7 +177,7 @@
 					<div style="position: relative; text-align: center;">
 						剩余：<input class="updateData" type="text" name="updateshengyu" id="updateshengyu" />
 					</div>
-				<!-- 	<div style="position: relative; text-align: center; left: -14px;">
+              				<!--<div style="position: relative; text-align: center; left: -14px;">
 						有效时间：<input type="text" name="updatetime" id="updatetime" />
 					</div> -->
 					<div style="position: relative; text-align: center; left: -14px;">
