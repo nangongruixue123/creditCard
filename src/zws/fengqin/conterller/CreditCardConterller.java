@@ -40,12 +40,7 @@ public class CreditCardConterller {
 		@RequestMapping(value="/updateCard",method=RequestMethod.POST)
 		@ResponseBody
 		public String update(@RequestBody Map<String, Object> map) {
-//			System.out.println(creditCard.getKawei());
 			System.out.println(map.size());
-//			System.out.println(creditCard.getKazhu());
-//			System.out.println(creditCard.getId()	);
-//			System.out.println(creditCard.getMoney());
-			//creditCardService.update(map);
 			return "success";
 		}
 		
