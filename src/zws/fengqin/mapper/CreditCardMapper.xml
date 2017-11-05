@@ -12,7 +12,9 @@
 		hezhang=#{hezhang} where id=#{id}
 	</update>
 	<insert id="add">
-		insert into creditcard values(?,?,?,?,?,?,?,?,?,?,?);
+		insert into creditcard 
+		values(#{id},#{kazhu},#{fakahang},#{kawei},#{zhangdan},#{huankuan},#{shengyu},
+		?,?,?,?);
 	</insert>
 	
 	<delete id="del">

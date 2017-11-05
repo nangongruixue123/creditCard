@@ -24,33 +24,30 @@ public class CreditCardConterller {
 	@Autowired
 	private CreditCardService creditCardService;
 
-	 @RequestMapping("search")
-	 @ResponseBody
-	 public List<CreditCard> getAll(){
-	 return creditCardService.queryAll();
-	 }
-	 
-	 @RequestMapping("addCard")
-		public String add(CreditCard creditCard) {
-			System.out.println(creditCard.getKazhu());
-			creditCardService.add(creditCard);
-			return "redirect:/index.jsp";
-		}
-	 
-		@RequestMapping(value="/updateCard",method=RequestMethod.POST)
-		@ResponseBody
-		public String update(@RequestBody Map<String, Object> map) {
-			System.out.println(map.size());
-			return "success";
-		}
-		
-		@RequestMapping("delete")
-		public String del(Integer id) {
-			System.out.println(id);
-			creditCardService.del(id);
-			return "redirect:/index.jsp";
-		}
+	@RequestMapping("search")
+	@ResponseBody
+	public List<CreditCard> getAll() {
+		return creditCardService.queryAll();
+	}
 
+	@RequestMapping(value = "addCard", method = RequestMethod.POST)
+	public String add(@RequestBody Map<String, Object> creditCard) {
+//		creditCardService.add(creditCard);
+		return "redirect:/index.jsp";
+	}
 
+	@RequestMapping(value = "/updateCard", method = RequestMethod.POST)
+	@ResponseBody
+	public String update(@RequestBody Map<String, Object> map) {
+		System.out.println(map.size());
+		return "success";
+	}
+
+	@RequestMapping("delete")
+	public String del(Integer id) {
+		System.out.println(id);
+		creditCardService.del(id);
+		return "redirect:/index.jsp";
+	}
 
 }
