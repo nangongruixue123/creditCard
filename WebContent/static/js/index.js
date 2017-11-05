@@ -57,37 +57,42 @@ $("#bbb").on("click", function() {
 });
 
 // 通过class添加on时间，可以带3个参数
-$("#aaa").on("click", ".menu-update", function() {
-	updateCard();
-	$("#tijiao").on("click", function() {
-		$.ajax({
-			method : "post",
-			url : "updateCard",
-			data : JSON.stringify({
-				'id' : $("#updateid").val() + "123",
-				'kazhu' : $("#updatekazhu").val(),
-				'fakahang' : $("#updatefakahang").val(),
-				'kawei' : $("#updatekawei").val(),
-				'zhangdan' : $("#updatezhangdan").val(),
-				'huankuan' : $("#updatehuankuan").val(),
-				'shengyu' : $("#updateshengyu").val(),
-				'money' : $("#updatemoney").val(),
-				'yihuan' : $("#updateyihuan").val(),
-				'weihuan' : $("#updateweihuan").val(),
-				'hezhang' : $("#updatehezhang").val()
-			}),
-			dataType : "text",
-			contentType:"application/json;charset=utf-8",
-			success : function(resp) {
-				if (resp) {
-					alert("修改成功");
-					location.href = "index.jsp";
-				}
+$("#aaa").on("click",".menu-update",function() {
+			var tr = $(this).parent().parent();
+			var trData = tr.find("td");
+			for(var i = 0;i < trData.length;i++){
+				$('.updateData').eq(i).val(trData.eq(i).text());
 			}
-		});
-	})
+			updateCard();
+			$("#tijiao").on("click", function() {
+				$.ajax({
+					method : "post",
+					url : "updateCard",
+					data : JSON.stringify({
+						'id' : $("#updateid").val() + "123",
+						'kazhu' : $("#updatekazhu").val(),
+						'fakahang' : $("#updatefakahang").val(),
+						'kawei' : $("#updatekawei").val(),
+						'zhangdan' : $("#updatezhangdan").val(),
+						'huankuan' : $("#updatehuankuan").val(),
+						'shengyu' : $("#updateshengyu").val(),
+						'money' : $("#updatemoney").val(),
+						'yihuan' : $("#updateyihuan").val(),
+						'weihuan' : $("#updateweihuan").val(),
+						'hezhang' : $("#updatehezhang").val()
+					}),
+					dataType : "text",
+					contentType : "application/json;charset=utf-8",
+					success : function(resp) {
+						if (resp) {
+							alert("修改成功");
+							location.href = "index.jsp";
+						}
+					}
+				});
+			})
 
-});
+		});
 
 function updateCard() {
 	$("#updateModal").modal("show");
@@ -114,7 +119,6 @@ function search() {
 			// var hrefval = $(tr).find('td:eq(12) > input').attr('id');
 			// $(tr).find('td:eq(12) > input').attr('href', hrefval + "/" +
 			// row['id']);
-
 			$('table > tbody').append(tr);
 		});
 	});

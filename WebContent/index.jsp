@@ -157,40 +157,40 @@
 			<div class="modal-body">
 				<form action="updateCard" method="post" id="qwe">
 					<div style="position: relative; text-align: center;">
-						序号：<input type="text" name="updateid" id="updateid" />
+						序号：<input class="updateData"  type="text" name="updateid" id="updateid" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						卡主：<input type="text" name="updatekahzu" id="updatekazhu" />
+						卡主：<input class="updateData" type="text" name="updatekahzu" id="updatekazhu" />
 					</div>
 					<div style="position: relative; text-align: center; left: -7px;">
-						发卡行：<input type="text" name="updatefakahang" id="updatefakahang" />
+						发卡行：<input class="updateData" type="text" name="updatefakahang" id="updatefakahang" />
 					</div>
 					<div style="position: relative; text-align: center; left: -11px;">
-						卡尾4位：<input type="text" name="updatekawei" id="updatekawei" />
+						卡尾4位：<input class="updateData" type="text" name="updatekawei" id="updatekawei" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						账单：<input type="text" name="updatezhangdan" id="updatezhangdan" />
+						账单：<input class="updateData" type="text" name="updatezhangdan" id="updatezhangdan" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						还款：<input type="text" name="updatehuankuan" id="updatehuankuan" />
+						还款：<input class="updateData" type="text" name="updatehuankuan" id="updatehuankuan" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						剩余：<input type="text" name="updateshengyu" id="updateshengyu" />
+						剩余：<input class="updateData" type="text" name="updateshengyu" id="updateshengyu" />
 					</div>
 				<!-- 	<div style="position: relative; text-align: center; left: -14px;">
 						有效时间：<input type="text" name="updatetime" id="updatetime" />
 					</div> -->
 					<div style="position: relative; text-align: center; left: -14px;">
-						剩余金额：<input type="text" name="updatemoney" id="updatemoney" />
+						剩余金额：<input class="updateData" type="text" name="updatemoney" id="updatemoney" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						已还：<input type="text" name="updateyihuan" id="updateyihuan" />
+						已还：<input class="updateData" type="text" name="updateyihuan" id="updateyihuan" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						未还：<input type="text" name="updateweihuan" id="updateweihuan" />
+						未还：<input class="updateData" type="text" name="updateweihuan" id="updateweihuan" />
 					</div>
 					<div style="position: relative; text-align: center;">
-						核账：<input type="text" name="updatehezhang" id="updatehezhang" />
+						核账：<input class="updateData" type="text" name="updatehezhang" id="updatehezhang" />
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
